@@ -16,3 +16,8 @@ Palier 3:
 ->parametre nommé rend lle code plus facile a comprendre
 
 ![Screenshot](images/Screenshot2.png)
+
+Palier 4:
+-> list contient des elements, map contient des cles et des valeurs
+
+![Screenshot](images/Screenshot3.png)
