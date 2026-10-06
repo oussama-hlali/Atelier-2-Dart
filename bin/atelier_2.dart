@@ -20,6 +20,6 @@ void main(List<String> arguments) {
   print("Ma moyenne = ${moyenne.toStringAsFixed(2)}");
 
   // TODO 5 : décommenter la ligne suivante, lire l'erreur, puis la commenter
-  tva = 0.20;
+  //tva = 0.20;
   print("année :$anneeCourante");
 }
