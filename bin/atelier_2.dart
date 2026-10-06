@@ -13,8 +13,8 @@ void main(List<String> arguments) {
   surnom = "Doudou";
   print(surnom ?? 'auncun surnom');
   // TODO 4 : décommenter, lire l'erreur, puis commenter à nouveau
-  String? vide;
-  print(vide!.length);
+  //String? vide;
+  //print(vide!.length);
   print(decrire(null));
   print(decrire('Ahmed'));
 }
@@ -22,5 +22,5 @@ void main(List<String> arguments) {
 // TODO 5 : compléter cette fonction
 // elle renvoie 'Bonjour X' si nom n'est pas null, sinon 'Bonjour visiteur'
 String decrire(String? nom) {
-  return '';
+  return 'Bonjour ${nom ?? 'visiteur'}';
 }

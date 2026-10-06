@@ -6,3 +6,8 @@ Finall recoit la valeur une seule fois
 const est une valeur fixe.
 
 ![Screenshot](images/Screenshot.png)
+
+Palier 2: 
+-> Pour eviter les erreurs dans le programme.
+
+![Screenshot](images/Screenshot1.png)
