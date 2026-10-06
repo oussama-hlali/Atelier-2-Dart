@@ -11,3 +11,8 @@ Palier 2:
 -> Pour eviter les erreurs dans le programme.
 
 ![Screenshot](images/Screenshot1.png)
+
+Palier 3:
+->parametre nommé rend lle code plus facile a comprendre
+
+![Screenshot](images/Screenshot2.png)
