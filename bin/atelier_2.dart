@@ -1,37 +1,45 @@
 import 'package:console/console.dart' as console;
 
+class Produit {
+  final String nom;
+  final double prix;
+  Produit({required this.nom, required this.prix});
+  double get prixTTC => prix * 1.19;
+  @override
+  String toString() => '$nom : $prix DT';
+}
+
 void main(List<String> arguments) {
-  List<int> notes = [12, 8, 15, 17, 9];
-  // TODO 1 : ajouter la note 11 à la liste
-  notes.add(11);
-
-  // TODO 2 : afficher le nombre de notes (propriété length)
-  print('${notes.length} notes');
-
-  // TODO 3 : afficher chaque note, une par ligne,
-  // avec une boucle for
-  for (int note in notes) {
-    print(note);
+  final etudiants = [
+    Etudiant(nom: 'Ahmed', moyenne: 14.5),
+    Etudiant(nom: 'Sarra', moyenne: 9.0),
+    Etudiant(nom: 'Youssef', moyenne: 12.0),
+  ];
+  // TODO 4 : afficher chaque étudiant (une boucle for)
+  for (var etudiant in etudiants) {
+    print(etudiant);
   }
-  // TODO 4 : créer une liste des notes >= 10 avec where, puis l'afficher
-  // indice : notes.where((n) => ...).toList()
-  List<int> notesValides = notes.where((n) => n >= 10).toList();
-  print('notes>=10 : $notesValides');
-  // TODO 5 : calculer et afficher la moyenne
-  // indice : une boucle et une variable somme
-  int somme = 0;
-  for (int note in notes) {
-    somme += note;
-  }
-  double moyenne = somme / notes.length;
-  print('Moyenne : ${moyenne.toStringAsFixed(2)}');
-  Map<String, int> ages = {'Ahmed': 22, 'Sarra': 21};
-  // TODO 6 : ajouter 'Youssef' avec l'âge 23
-  ages['Youssef'] = 23;
+  // TODO 5 : afficher uniquement les admis (moyenne >= 10)
+  // indice : etudiants.where((e) => e.estAdmis)
+  final admis = etudiants.where((e) => e.estAdmis);
+  print("Admis : ${admis.map((e) => e.nom).join(', ')}");
+}
 
-  // TODO 7 : parcourir la map et afficher 'Ahmed a 22 ans'
-  // indice : ages.forEach((cle, valeur) { ... });
-  ages.forEach((cle, valeur) {
-    print('$cle a $valeur ans');
-  });
+class Etudiant {
+  // TODO 1 : déclarer final nom (String) et final moyenne (double)
+  final String nom;
+  final double moyenne;
+
+  // TODO 2 : constructeur avec paramètres nommés obligatoires
+  Etudiant({required this.nom, required this.moyenne});
+
+  // TODO 3 : getter estAdmis qui renvoie true si moyenne >= 10
+  bool get estAdmis => moyenne >= 10;
+
+  // TODO 3 bis : redéfinir toString() pour renvoyer
+  // 'Ahmed - 14.5 (admis)' ou 'Sarra - 9.0 (non admis)'
+  @override
+  String toString() {
+    return "$nom - $moyenne (${estAdmis ? 'admis' : 'non admis'})";
+  }
 }
